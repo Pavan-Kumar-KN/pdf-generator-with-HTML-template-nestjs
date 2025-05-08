@@ -1,0 +1,211 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting Started with Our Application</title>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333333;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .email-wrapper {
+      background-color: #f4f4f4;
+      padding: 20px 0;
+    }
+
+    .email-container {
+      max-width: 600px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      margin: 0 auto;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .email-header {
+      text-align: center;
+      padding: 35px 30px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .logo-box {
+      width: 120px;
+      height: fit-content;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .logo-box img {
+      display: block;
+      margin: 12px auto;
+        width: 100%;
+        height: auto;
+      filter: invert(100%);
+    }
+
+    .title {
+      margin: 0 0 8px 0;
+      font-size: 24px;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .subtitle {
+      color: #666666;
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .email-body {
+      padding: 35px 30px;
+    }
+
+    .credentials-box {
+      background-color: #f8fafc;
+      border-radius: 6px;
+      margin: 20px 0 30px 0;
+    }
+
+    .credentials-inner {
+      padding: 20px;
+    }
+
+    .row-label {
+      font-weight: 500;
+      color: #444444;
+      width: 40%;
+      font-size: 16px;
+      padding-right: 15px;
+    }
+
+    .row-value {
+      font-family: monospace;
+      background-color: #ffffff;
+      padding: 8px 12px;
+      border-radius: 4px;
+      border: 1px solid #e2e8f0;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #2563eb;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-bottom: 25px;
+    }
+
+    .features-list {
+      padding-left: 20px;
+      margin: 0 0 25px 0;
+      color: #333333;
+    }
+
+    .fallback-text {
+      text-align: center;
+      font-size: 14px;
+      color: #666666;
+      margin-bottom: 5px;
+    }
+
+    .fallback-link {
+      text-align: center;
+      font-size: 13px;
+      color: #2563eb;
+      word-break: break-all;
+    }
+
+    .email-footer {
+      padding: 20px 30px;
+      text-align: center;
+      font-size: 13px;
+      color: #888888;
+      border-top: 1px solid #e8e8e8;
+    }
+  </style>
+</head>
+<body>
+  <table class="email-wrapper">
+    <tr>
+      <td align="center">
+        <table class="email-container">
+          <!-- Header -->
+          <tr>
+            <td class="email-header">
+              <div class="logo-box">
+                <img src="" alt="Logo" width="24" height="24" />
+              </div>
+              <h1 class="title">Welcome Aboard!</h1>
+              <p class="subtitle">Here’s how to get started with your new account</p>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td class="email-body">
+              <p>Hi there,</p>
+              <p>We're excited to have you on board. Below are your account details. Use them to log in and begin exploring all that our platform has to offer.</p>
+
+              <!-- Credentials -->
+              <table class="credentials-box">
+                <tr>
+                  <td class="credentials-inner">
+                    <table>
+                      <tr>
+                        <td class="row-label">Username</td>
+                        <td><div class="row-value">{{username}}</div></td>
+                      </tr>
+                    </table>
+                    <table>
+                      <tr>
+                        <td class="row-label">Password</td>
+                        <td><div class="row-value">{{password}}</div></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+
+              <!-- Features -->
+              <p style="font-weight: 500;">Here’s what you can do:</p>
+              <ul class="features-list">
+                <li>Customize your profile and settings</li>
+                <li>Explore core features and tools</li>
+                <li>Connect with our support team if needed</li>
+              </ul>
+
+              <!-- Fallback -->
+              <p class="fallback-text">If the button doesn't work, copy this link:</p>
+              <p class="fallback-link">{{link}}</p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td class="email-footer">
+              <p>If you didn’t sign up for this account, please ignore this email.</p>
+              <p>&copy; 2025 zunaco. All rights reserved.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

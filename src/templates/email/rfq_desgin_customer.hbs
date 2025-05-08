@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Your RFQ Details - {{projectName}}</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        background-color: #f8f9fb;
+        padding: 20px;
+        color: #333;
+        margin: 0;
+      }
+      .container {
+        max-width: 700px;
+        margin: auto;
+        background: #fff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 6px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+      .logo img {
+        width: 100px; /* Adjust as needed */
+        height: auto;
+      }
+      .header-content {
+        text-align: right;
+        flex: 1;
+      }
+      .header-title {
+        font-size: 20px;
+        color: #1a6f37;
+        font-weight: bold;
+        margin-bottom: 4px;
+      }
+      .header-details {
+        font-size: 14px;
+        color: #444;
+      }
+      h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+        color: #1a6f37;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 16px;
+      }
+      th,
+      td {
+        padding: 8px 12px;
+        border: 1px solid #ccc;
+        text-align: left;
+      }
+      th {
+        background-color: #e2f3e9;
+        width: 220px;
+      }
+      .footer {
+        font-size: 13px;
+        margin-top: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header Section -->
+        <table
+        width='100%'
+        cellpadding='0'
+        cellspacing='0'
+        border='0'
+        style='margin-bottom: 20px; border: none; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;'
+      >
+        <tr>
+          <td style='width: 170px; border: none; padding: 0; margin: 0;'>
+            <img
+              src='https://networkpcb.com/images/Networkpcb_blacklogo.png'
+              alt='Network PCB Logo'
+              style='width: 170px; height: auto; display: block; border: none;'
+            />
+          </td>
+          <td style='text-align: right; border: none; padding: 0; margin: 0;'>
+            <div
+              style='font-size: 14px; color: #1a6f37; font-weight: bold; margin-bottom: 4px;'
+            >
+              RFQ Submission -
+              {{projectName}}
+            </div>
+            <div style='font-size: 13px; color: #444;'>
+              <strong>RFQ Number: {{rfqNumber}}</strong>
+              <br />
+              <strong>Date:  {{rfqDate}}</strong>
+             
+            </div>
+          </td>
+        </tr>
+      </table>
+      <hr>
+
+
+      <h2>Thank you for your RFQ!</h2>
+      <p>We've received your submission. Here are the board specifications you provided:</p>
+
+<!-- Rest of the content remains the same -->
+      <div class='section'>
+        <h3>Project Details</h3>
+        <table>
+          <tr>
+            <th>Project Name</th>
+            <td>{{projectName}}</td>
+          </tr>
+          <tr>
+            <th>Quantity</th>
+            <td>{{quantity}}</td>
+          </tr>
+          <tr>
+            <th>Service Type</th>
+            <td>{{serviceType}}</td>
+          </tr>
+        </table>
+      </div>
+      
+      <table>
+        <tr><th>Part Number</th><td>{{partNumber}}</td></tr>
+        <tr><th>Board Size</th><td>{{boardSize}}</td></tr>
+        <tr><th>Board Thickness</th><td>{{boardThickness}}</td></tr>
+        <tr><th>Tolerance</th><td>{{tolerance}}</td></tr>
+        <tr><th>Solder Mask Color</th><td>{{solderMaskColor}}</td></tr>
+        <tr><th>Silkscreen Color</th><td>{{silkscreenColor}}</td></tr>
+        <tr><th>Board Finish</th><td>{{boardFinish}}</td></tr>
+        <tr><th>Min. Hole Size</th><td>{{minHoleSize}}</td></tr>
+        <tr><th>Sub-spec</th><td>{{subSpec}}</td></tr>
+      </table>
+
+      <div class="footer">
+        Our team will reach out shortly with your quote. If you have questions in the meantime, feel free to email
+        <a href="mailto:sales@networkpcb.com">sales@networkpcb.com</a>.
+      </div>
+    </div>
+  </body>
+</html>

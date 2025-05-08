@@ -1,0 +1,245 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <title>RFQ Request - {{projectName}}</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        background-color: #f8f9fb;
+        padding: 20px;
+        color: #333;
+        margin: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        background: #fff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 6px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 16px;
+      }
+      th,
+      td {
+        padding: 8px 12px;
+        border: 1px solid #ccc;
+        text-align: left;
+      }
+      th {
+        background-color: #e2f3e9;
+        font-weight: normal;
+        width: 220px;
+      }
+      .section {
+        margin-bottom: 24px;
+      }
+      .footer {
+        font-size: 12px;
+        color: #666;
+        margin-top: 20px;
+      }
+      /* Header specific styles 
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .logo img {
+        width: 170px; 
+        height: auto;
+      }
+
+      .header-content {
+        text-align: right;
+        flex: 1;
+      }
+
+      .header-title {
+        font-size: 14px;
+        color: #1a6f37;
+        font-weight: bold;
+        margin-bottom: 4px;
+      }
+
+      .header-details {
+        font-size: 13px;
+        color: #444;
+      } 
+      */
+    </style>
+  </head>
+  <body>
+    <hr class='container'>
+      <table
+        width='100%'
+        cellpadding='0'
+        cellspacing='0'
+        border='0'
+        style='margin-bottom: 20px; border: none; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;'
+      >
+        <tr>
+          <td style='width: 170px; border: none; padding: 0; margin: 0;'>
+            <img
+              src=''
+              alt='Network PCB Logo'
+              style='width: 170px; height: auto; display: block; border: none;'
+            />
+          </td>
+          <td style='text-align: right; border: none; padding: 0; margin: 0;'>
+            <div
+              style='font-size: 14px; color: #1a6f37; font-weight: bold; margin-bottom: 4px;'
+            >
+              RFQ Submission -
+              {{projectName}}
+            </div>
+            <div style='font-size: 13px; color: #444;'>
+              <strong>RFQ Number: {{rfqNumber}}</strong>
+              <br />
+              <strong>Date:  {{rfqDate}}</strong>
+             
+            </div>
+          </td>
+        </tr>
+      </table>
+      <hr>
+
+      <div class='section'>
+        <h3>Contact Information</h3>
+        <table>
+          <tr>
+            <th>Name</th>
+            <td>{{name}}</td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td>{{email}}</td>
+          </tr>
+          <tr>
+            <th>Company</th>
+            <td>{{company}}</td>
+          </tr>
+          <tr>
+            <th>Contact Number</th>
+            <td>{{contactNumber}}</td>
+          </tr>
+          <tr>
+            <th>Address</th>
+            <td>{{address}}</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Rest of the content remains the same -->
+      <div class='section'>
+        <h3>Project Details</h3>
+        <table>
+          <tr>
+            <th>Project Name</th>
+            <td>{{projectName}}</td>
+          </tr>
+          <tr>
+            <th>Quantity</th>
+            <td>{{quantity}}</td>
+          </tr>
+          <tr>
+            <th>Service Type</th>
+            <td>{{serviceType}}</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class='section'>
+        <h3>Board Specifications</h3>
+        <table>
+          <tr>
+            <th>Part Number</th>
+            <td>{{partNumber}}</td>
+          </tr>
+          <tr>
+            <th>Board Size</th>
+            <td>{{boardSize}}</td>
+          </tr>
+          <tr>
+            <th>Board Thickness</th>
+            <td>{{boardThickness}}</td>
+          </tr>
+          <tr>
+            <th>Tolerance</th>
+            <td>{{tolerance}}</td>
+          </tr>
+          <tr>
+            <th>Solder Mask Color</th>
+            <td>{{solderMaskColor}}</td>
+          </tr>
+          <tr>
+            <th>Silkscreen Color</th>
+            <td>{{silkscreenColor}}</td>
+          </tr>
+          <tr>
+            <th>Board Finish</th>
+            <td>{{boardFinish}}</td>
+          </tr>
+          <tr>
+            <th>Min. Hole Size</th>
+            <td>{{minHoleSize}}</td>
+          </tr>
+          <tr>
+            <th>Sub-spec</th>
+            <td>{{subSpec}}</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class='section'>
+        <h3>Additional Options</h3>
+        <table>
+          <tr>
+            <th>Testing</th>
+            <td>{{testing}}</td>
+          </tr>
+          <tr>
+            <th>Impedance Control</th>
+            <td>{{impCtrl}}</td>
+          </tr>
+          <tr>
+            <th>Dielectric</th>
+            <td>{{dielectric}}</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class='section'>
+        <h3>Additional Details</h3>
+        <table>
+          <tr>
+            <th>Description</th>
+            <td>{{description}}</td>
+          </tr>
+          <tr>
+            <th>Uploaded Files</th>
+            <td>
+              {{#each uploadedFiles}}
+                <div>{{this}}</div>
+              {{/each}}
+            </td>
+          </tr>
+          <tr>
+            <th>Newsletter Subscription</th>
+            <td>{{newsletter}}</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class='footer'>
+        Submitted via NetworkPCB.com RFQ Form<br />
+      </div>
+    </div>
+  </body>
+</html>
