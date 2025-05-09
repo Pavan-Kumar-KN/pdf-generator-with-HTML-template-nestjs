@@ -1,0 +1,154 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title RFQ Request - #{projectName}
+    style.
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        background-color: #f8f9fb;
+        padding: 20px;
+        color: #333;
+        margin: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        background: #fff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 6px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 16px;
+      }
+      th,
+      td {
+        padding: 8px 12px;
+        border: 1px solid #ccc;
+        text-align: left;
+      }
+      th {
+        background-color: #e2f3e9;
+        font-weight: normal;
+        width: 220px;
+      }
+      .section {
+        margin-bottom: 24px;
+      }
+      .footer {
+        font-size: 12px;
+        color: #666;
+        margin-top: 20px;
+      }
+  body
+    .container
+      table(width='100%', cellpadding='0', cellspacing='0', border='0', style='margin-bottom: 20px; border: none; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;')
+        tr
+          td(style='width: 170px; border: none; padding: 0; margin: 0;')
+            img(src='https://networkpcb.com/images/Networkpcb_blacklogo.png', alt='Network PCB Logo', style='width: 170px; height: auto; display: block; border: none;')
+          td(style='text-align: right; border: none; padding: 0; margin: 0;')
+            div(style='font-size: 14px; color: #1a6f37; font-weight: bold; margin-bottom: 4px;') RFQ Submission
+            div(style='font-size: 13px; color: #444;')
+              strong RFQ No: #{rfqNumber}
+              br
+              strong Date: #{rfqDate}
+      hr
+
+      .section
+        h3 Contact Information
+        table
+          tr
+            th Name
+            td #{name}
+          tr
+            th Email
+            td #{email}
+          tr
+            th Company
+            td #{company}
+          tr
+            th Contact Number
+            td #{contactNumber}
+          tr
+            th Address
+            td #{address}
+
+      .section
+        h3 Project Details
+        table
+          tr
+            th Project Name
+            td #{projectName}
+          tr
+            th Quantity
+            td #{quantity}
+          tr
+            th Service Type
+            td #{serviceType}
+
+      .section
+        h3 Board Specifications
+        table
+          tr
+            th Part Number
+            td #{partNumber}
+          tr
+            th Board Size
+            td #{boardSize}
+          tr
+            th Board Thickness
+            td #{boardThickness}
+          tr
+            th Tolerance
+            td #{tolerance}
+          tr
+            th Solder Mask Color
+            td #{solderMaskColor}
+          tr
+            th Silkscreen Color
+            td #{silkscreenColor}
+          tr
+            th Board Finish
+            td #{boardFinish}
+          tr
+            th Min. Hole Size
+            td #{minHoleSize}
+          tr
+            th Sub-spec
+            td #{subSpec}
+
+      .section
+        h3 Additional Options
+        table
+          tr
+            th Testing
+            td #{testing}
+          tr
+            th Impedance Control
+            td #{impCtrl}
+          tr
+            th Dielectric
+            td #{dielectric}
+
+      .section
+        h3 Additional Details
+        table
+          tr
+            th Description
+            td #{description}
+          tr
+            th Uploaded Files
+            td
+              each file in uploadedFiles
+                div #{file}
+          tr
+            th Newsletter Subscription
+            td #{newsletter}
+
+      .footer
+        | Submitted via NetworkPCB.com RFQ Form
+        br

@@ -1,0 +1,132 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Your RFQ Details - #{projectName}
+    style.
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        background-color: #f8f9fb;
+        padding: 20px;
+        color: #333;
+        margin: 0;
+      }
+      .container {
+        max-width: 700px;
+        margin: auto;
+        background: #fff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 6px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+      .logo img {
+        width: 100px;
+        height: auto;
+      }
+      .header-content {
+        text-align: right;
+        flex: 1;
+      }
+      .header-title {
+        font-size: 20px;
+        color: #1a6f37;
+        font-weight: bold;
+        margin-bottom: 4px;
+      }
+      .header-details {
+        font-size: 14px;
+        color: #444;
+      }
+      h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+        color: #1a6f37;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 16px;
+      }
+      th, td {
+        padding: 8px 12px;
+        border: 1px solid #ccc;
+        text-align: left;
+      }
+      th {
+        background-color: #e2f3e9;
+        width: 220px;
+      }
+      .footer {
+        font-size: 13px;
+        margin-top: 24px;
+      }
+  body
+    .container
+      table(width='100%' cellpadding='0' cellspacing='0' border='0' style='margin-bottom: 20px; border: none;')
+        tr
+          td(style='width: 170px; border: none; padding: 0;')
+            img(src='https://networkpcb.com/images/Networkpcb_blacklogo.png', alt='Network PCB Logo', style='width: 170px; height: auto; display: block; border: none;')
+          td(style='text-align: right; border: none; padding: 0;')
+            div(style='font-size: 14px; color: #1a6f37; font-weight: bold; margin-bottom: 4px;') RFQ Submission
+            div(style='font-size: 13px; color: #444;')
+              strong RFQ No: #{rfqNumber}
+              br
+              strong Date: #{rfqDate}
+      hr
+
+      h2 Thank you for your RFQ!
+      p We've received your submission. Here are the board specifications you provided:
+
+      .section
+        h3 Project Details
+        table
+          tr
+            th Project Name
+            td #{projectName}
+          tr
+            th Quantity
+            td #{quantity}
+          tr
+            th Service Type
+            td #{serviceType}
+
+      table
+        tr
+          th Part Number
+          td #{partNumber}
+        tr
+          th Board Size
+          td #{boardSize}
+        tr
+          th Board Thickness
+          td #{boardThickness}
+        tr
+          th Tolerance
+          td #{tolerance}
+        tr
+          th Solder Mask Color
+          td #{solderMaskColor}
+        tr
+          th Silkscreen Color
+          td #{silkscreenColor}
+        tr
+          th Board Finish
+          td #{boardFinish}
+        tr
+          th Min. Hole Size
+          td #{minHoleSize}
+        tr
+          th Sub-spec
+          td #{subSpec}
+
+      .footer
+        | Our team will reach out shortly with your quote. If you have questions in the meantime, feel free to email 
+        a(href='mailto:sales@networkpcb.com') sales@networkpcb.com
+        | .

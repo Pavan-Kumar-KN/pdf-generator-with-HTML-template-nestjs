@@ -30,6 +30,7 @@
     "html-to-pdf": "^0.1.11",
     "nodemailer": "^7.0.2",
     "pdfkit": "^0.17.1",
+    "pug": "^3.0.3",
     "puppeteer": "^24.8.1",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"

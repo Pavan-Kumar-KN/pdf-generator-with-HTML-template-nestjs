@@ -6,6 +6,7 @@ import { MailModule } from './mail/mail.module';
 import { ConfigModule } from '@nestjs/config';
 import * as path from 'path';
 import { HandlebarsAdapter } from '@nestjs-modules/mailer/dist/adapters/handlebars.adapter';
+import { PugAdapter } from '@nestjs-modules/mailer/dist/adapters/pug.adapter';
 
 @Module({
   // here we are setting up the mail module 
@@ -24,11 +25,18 @@ import { HandlebarsAdapter } from '@nestjs-modules/mailer/dist/adapters/handleba
       }
     },
     template: {
-      dir: path.join(__dirname, 'templates/email'),
-      adapter: new HandlebarsAdapter(),
-      options: {
-        strict: true,
-      },
+      // dir: path.join(__dirname, 'templates/email'),
+      // adapter: new HandlebarsAdapter(),
+      // options: {
+      //   strict: true,
+      // },
+
+      // * here we are setting up the mail design with pugs 
+      dir: path.join(__dirname, 'templates/pugs'),
+          adapter: new PugAdapter(),
+          options: {
+            strict: true,
+          },
     }
   }),
 
