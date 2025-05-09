@@ -22,5 +22,8 @@ export class MailController {
         return await this.mailService.sendContactUsMail(contact , templateName);
     }
 
-
+    @Post('sendquotation')
+    async sendQuotationMail(@Body() quotation: any , @Query('template') templateName: string) {
+        return await this.mailService.sendQuotationMail(quotation , templateName);
+    }
 }

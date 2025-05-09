@@ -1,0 +1,233 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <title>PCB Fabrication Quotation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #000;
+        padding: 4px;
+        text-align: left;
+        font-size: 13px;
+      }
+
+      .quote-section {
+        margin-top: 10px;
+        font-size: 13px;
+      }
+      .quote-section h2 {
+        font-size: 13px;
+      }
+
+      .quote-header {
+        font-size: 13px;
+        font-weight: bold;
+        margin-bottom: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .quotation-section table {
+        font-weight: bold;
+      }
+
+      .terms {
+        margin-top: 20px;
+        font-size: 12px;
+      }
+
+      .terms h2 {
+        font-size: 13px;
+        margin-bottom: 5px;
+      }
+
+      .header {
+        font-size: 13px;
+        line-height: 1.1;
+        padding: 0;
+        margin: 0;
+      }
+      .header strong {
+        color: #333;
+      }
+      hr {
+        border: none;
+        height: 1px;
+        background-color: #999;
+        margin: 8px 0;
+      }
+      
+      /* Adjusted styles for better spacing */
+      .page-container {
+        max-width: 100%;
+        padding: 5px 7px;
+      }
+      
+      nav {
+        margin: 0;
+        padding: 0;
+      }
+      
+      .logo img {
+        margin-bottom: 0;
+      }
+      
+      .center-header {
+        position: relative;
+        padding-top: 0;
+        margin-bottom: 25px; /* Increased for more space before the horizontal line */
+        height: 40px; /* Explicitly set height to contain the elements */
+      }
+      
+      .center-header h2 {
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <nav>
+        <div style='display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0;'>
+          <div class='logo' style='flex: 1;'>
+            <img
+              src='{{logoUrl}}'
+              alt='Network PCB Logo'
+              style='width: 180px; height: fit-content; margin-bottom: 0;'
+            />
+          </div>
+        </div>
+      </nav>
+
+      <div class='header'>
+        <div class='center-header' style='margin-bottom: 15px;'>
+          <!-- Centered Title Over Entire Container -->
+          <h2 style='font-size: 19px; font-weight: bold; text-transform: uppercase; text-align: center; margin: 5px 0;'>
+            Quotation
+          </h2>
+
+          <!-- Right-Aligned Info -->
+          <div style='position: absolute; top: 0; right: 0; text-align: right;'>
+             <p style='margin: 1px 0 3px 0;'><strong>Quote Number: {{quoteNumber}}</strong></p>
+             <p style='margin: 1px 0 3px 0;'><strong>Quote Date: {{quoteDate}}</strong></p>
+          </div>
+        </div>
+
+        <hr style='margin: 8px 0; border: 0.9px solid #ccc; clear: both;' />
+
+        <div style='font-size: 13px; line-height: 1.4; margin-top: 5px;'>
+          <div style='display: flex; justify-content: space-between; margin-bottom: 3px;'>
+            <div style='flex: 1;'><strong>{{customerName}}</strong></div>
+            <div style='flex: 1; text-align: right;'><strong>Contact:</strong> {{contactPerson}}</div>
+          </div>
+          <div style='display: flex; justify-content: space-between; margin-bottom: 3px;'>
+            <div style='flex: 1;'><strong>{{customerAddress}}</strong></div>
+            <div style='flex: 1; text-align: right;'><strong>Email:</strong> {{contactemail}}</div>
+          </div>
+          <div style='display: flex; justify-content: space-between; margin-bottom: 3px;'>
+            <div style='flex: 1;'><strong>File:</strong> {{file}}</div>
+            <div style='flex: 1; text-align: right;'><strong>Phone:</strong> {{contactphone}}</div>
+          </div>
+          <div style='display: flex; justify-content: space-between; margin-bottom: 3px;'>
+            <div style='flex: 1;'></div>
+            <div style='flex: 1; text-align: right;'><strong>FAX:</strong> {{fax}}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class='quote-section'>
+        <div class='quote-header'>
+          <span><strong>Part Number: {{partNumber}}</strong> </span>
+          <span><strong>DWG Rev: {{dwgRev}}</strong> </span>
+        </div>
+
+        <table>
+          <tr><td><strong>Layers:</strong></td><td>{{layers}}</td></tr>
+          <tr><td><strong>Material Type:</strong></td><td>{{materialType}}</td></tr>
+          <tr><td><strong>Board Thickness:</strong></td><td>{{boardThickness}}</td></tr>
+          <tr><td><strong>Board Size:</strong></td><td>{{boardSize}}</td></tr>
+          <tr><td><strong>Array Size:</strong></td><td>{{arraySize}}</td></tr>
+          <tr><td><strong>Hole Count:</strong></td><td>{{holeCount}}</td></tr>
+          <tr><td><strong>Smallest Hole Size:</strong></td><td>{{smallestHoleSize}}</td></tr>
+          <tr><td><strong>Board Finish:</strong></td><td>{{boardFinish}}</td></tr>
+          <tr><td><strong>Solder Mask:</strong></td><td>{{solderMask}}</td></tr>
+          <tr><td><strong>Silk Screen:</strong></td><td>{{silkScreen}}</td></tr>
+          <tr><td><strong>Color:</strong></td><td>{{color}}</td></tr>
+          <tr><td><strong>RoHS:</strong></td><td>{{rohs}}</td></tr>
+          <tr><td><strong>Comments:</strong></td><td>{{comments}}</td></tr>
+        </table>
+      </div>
+
+      <div class='quote-section quotation-section'>
+        <h2>
+          <strong>QUOTATIONS</strong>
+        </h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Board Quantity</th>
+              <th>Delivery</th>
+              <th>Unit</th>
+              <th>Test</th>
+              <th>Tooling</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each quotes}}
+              <tr>
+                <td>{{boardQuantity}}</td>
+                <td>{{delivery}}</td>
+                <td>{{unit}}</td>
+                <td>{{test}}</td>
+                <td>{{tooling}}</td>
+                <td>{{total}}</td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+
+      <div class='terms'>
+        <h2><strong>TERMS OF SALE</strong></h2>
+        <ul>
+          <li>Prices quoted are valid for 45 days.</li>
+          <li>F.O.B. San Jose, CA</li>
+          <li>Terms are subject to prior credit approval.</li>
+          <li>This quotation is subject to change if the information upon which
+            this quotation was based is found to be inaccurate or incomplete.</li>
+          <li>Delivery Dates are subject to change Pending Availability of special
+            materials from suppliers.</li>
+          <li>Quick turns i.e. 5 days or less are subject to shop scheduling at
+            the time the order is placed.</li>
+          <li>Orders placed On Hold due to discrepancies are subject to
+            Re-Scheduling. Cancellation charges apply should the order be
+            cancelled. Charges depend on the status of the order at the time of
+            cancellation.</li>
+          <li>Tooling and test charges are non-recurring charges per revision and
+            will be charged tax at the rate of 8.25%.</li>
+          <li>In the event of a non-conforming product, due to workmanship
+            mistakes, Network PCB will compensate the customer for the amount
+            invoiced for the services rendered. Returns will not be accepted after
+            30 days.</li>
+          <li>If no IPC-356 netlist format supplied, Network PCB will extract a
+            netlist from the Gerber Data and assumes no Liability for the boards.</li>
+        </ul>
+        <p>Thank you for allowing Network PCB the opportunity to quote your
+          printed circuit board requirements. If you have any questions, please
+          feel free to contact me.</p>
+      </div>
+    </div>
+  </body>
+</html>

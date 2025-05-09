@@ -57,6 +57,7 @@ export class AppService {
       'src',
       'pdfs',
       'templates',
+      // 'email',
       `${templatName}.hbs`,
     );
     const templateContent = fs.readFileSync(templatePath, 'utf8');

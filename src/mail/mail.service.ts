@@ -88,4 +88,13 @@ export class MailService {
     return { success: true };
   }
 
+  async sendQuotationMail(mailData: any , templateName : string ,): Promise<any> {
+    await this.mailerService.sendMail({
+      to : mailData.to,
+      subject: 'PCB Fabrication Quotation',
+      template: `./${templateName}`, // the .hbs file name
+      context: mailData.context,               // dynamic data injected into template
+    });
+  }
+
 }
